@@ -1,0 +1,34 @@
+__________________________________________________________________________________________________
+None
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+input_3 (InputLayer)         (None, None, None, 256)   0
+_________________________________________________________________
+pyramid_classification_0 (Co (None, None, None, 256)   590080
+_________________________________________________________________
+pyramid_classification_1 (Co (None, None, None, 256)   590080
+_________________________________________________________________
+pyramid_classification_2 (Co (None, None, None, 256)   590080
+_________________________________________________________________
+pyramid_classification_3 (Co (None, None, None, 256)   590080	
+_________________________________________________________________
+pyramid_classification (Conv (None, None, None, 90)    207450	注：全部卷积核都是3*3
+_________________________________________________________________
+pyramid_classification_resha (None, None, 10)          0	注：上一层90个通道，原特征图每个点有90个值，即10类和9个anchor
+_________________________________________________________________
+pyramid_classification_sigmo (None, None, 10)          0
+=================================================================
+Total params: 2,567,770
+Trainable params: 2,567,770
+Non-trainable params: 0
+
+
+input_3
+pyramid_classification_0
+pyramid_classification_1
+pyramid_classification_2
+pyramid_classification_3
+pyramid_classification
+pyramid_classification_reshape
+pyramid_classification_sigmoid
